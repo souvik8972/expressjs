@@ -1,11 +1,11 @@
 const express= require("express");
 const Route=express.Router();
+const path=require("path")
 
 
-
-Route.get("/",(re,res,next)=>{
+Route.get("/",(req,res,next)=>{
     console.log("in a middle ware");
-    res.send("hiii")
+    res.sendFile(path.join(__dirname,"..","view","shop.html"))
 });
 
 
